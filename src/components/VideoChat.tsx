@@ -9,6 +9,7 @@ const VideoChat: React.FC = () => {
   const remoteVideoRef = useRef<HTMLVideoElement | null>(null);
 
   useEffect(() => {
+    // TODO: localhost 환경에서 ws 연결 안됨
     const ws = new WebSocket(SIGNAL_SERVER);
     setSocket(ws);
 
